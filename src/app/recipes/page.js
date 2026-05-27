@@ -2,7 +2,7 @@ export default async function Recipes(){
   const res = await fetch("https://www.themealdb.com/api/json/v1/1/search.php?s=chicken")
   const data= await res.json()
 
- 
+//  i will work on this tomorrow
   return(
     <div style={{maxWidth:"900px", margin:"0 auto", padding:'20px'}}>
       <h1>Recipes</h1>
