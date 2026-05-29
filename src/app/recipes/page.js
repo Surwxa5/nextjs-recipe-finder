@@ -6,10 +6,10 @@ export default async function Recipes(){
 
   return(
     <div style={{maxWidth:"900px", margin:"0 auto", padding:'20px'}}>
-      <h1>Recipes</h1>
+      <h1 style={{fontWeight:'bold'}}>Recipes</h1>
     <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(200px,1fr))",gap:"16px"}}>
    {data.meals.map((meal)=>(
-    <Link href={`/recipes/${meal.idMeal}`}>
+    <Link key={meal.idMeal}  href={`/recipes/${meal.idMeal}`}>
     <div key={meal.idMeal} style={{border:'1px solid #ddd',borderRadius:'8px',overflow:"hidden"}}>
        <img src={meal.strMealThumb} alt={meal.strMeal} style={{width:"100%",height:"180px",objectFit:"cover"}}/>
       <div style={{padding:"12px"}}>
